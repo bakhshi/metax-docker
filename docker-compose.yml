@@ -4,21 +4,21 @@ services:
   metax-1:
     build: ./
     ports:
-      - 8001:8001
-    command: [ "metax", "-f", "/metax-data/config.xml" ]
+      - 8001:3000
+    command: [ "./start.sh" ]
     volumes:
       - ./metax-1:/metax-data
   metax-2:
     build: ./
     ports:
-      - 8002:8001
-    command: [ "metax", "-f", "/metax-data/config.xml" ]
+      - 8002:3000
+    command: [ "./start.sh" ]
     volumes:
       - ./metax-2:/metax-data
   metax-3:
     build: ./
     ports:
-      - 8003:8001
-    command: [ "metax", "-f", "/metax-data/config.xml" ]
+      - 8003:3000
+    command: [ "./start.sh" ]
     volumes:
       - ./metax-3:/metax-data
