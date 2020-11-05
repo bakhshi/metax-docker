@@ -2,23 +2,23 @@ version: "3.5"
 
 services:
   metax-1:
-    build: ./
+    image: bmv3502/metax_dev_no_localhost_check:0.1
     ports:
       - 8001:8001
-    command: [ "metax", "-f", "/metax-data/config.xml" ]
+    command: [ "/metax/bin/metax_web_api", "-f", "/metax-data/config.xml" ]
     volumes:
       - ./metax-1:/metax-data
   metax-2:
-    build: ./
+    image: bmv3502/metax_dev_no_localhost_check:0.1
     ports:
       - 8002:8001
-    command: [ "metax", "-f", "/metax-data/config.xml" ]
+    command: [ "/metax/bin/metax_web_api", "-f", "/metax-data/config.xml" ]
     volumes:
       - ./metax-2:/metax-data
   metax-3:
-    build: ./
+    image: bmv3502/metax_dev_no_localhost_check:0.1
     ports:
       - 8003:8001
-    command: [ "metax", "-f", "/metax-data/config.xml" ]
+    command: [ "/metax/bin/metax_web_api", "-f", "/metax-data/config.xml" ]
     volumes:
       - ./metax-3:/metax-data
